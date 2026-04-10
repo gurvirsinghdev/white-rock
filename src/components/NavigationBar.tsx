@@ -125,7 +125,10 @@ export default function NavigationBar() {
 
       {/* Mobile Menu */}
       <div
-        className={cn("fixed inset-0 bg-white", !mobileMenuOpen && "hidden")}
+        className={cn(
+          "fixed inset-0 bg-white z-50",
+          !mobileMenuOpen && "hidden",
+        )}
       >
         {/* Mobile Menu Header */}
         <div className="w-full p-6 flex items-center justify-between">
