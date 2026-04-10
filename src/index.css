@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-deap-teal: #0F3D3E; 
+  --color-forest-green: #2E6F5E;
+  --color-charcoal: #121212;
+  --color-soft-gray: #F4F6F7;
+  --color-soft-aqua: #4FB3A5;
+
+  /* Typography */
+  --font-primary: 'DM Sans', sans-serif;
+  --font-secondary: 'Poppins', sans-serif;
+}
