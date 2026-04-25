@@ -10,59 +10,59 @@ export default function LandingAboveTheFold() {
     title: string;
     description: string;
   }[] = [
-      {
-        icon: BiCheckShield,
-        title: "Safety First",
-        description: "Industry-leading safety scores",
-      },
-      {
-        icon: ClockIcon,
-        title: "On-Time Delivery",
-        description: "99.8% precision rate",
-      },
-      {
-        icon: GoShieldLock,
-        title: "24/7 Secure Yard",
-        description: "Fully monitored yard",
-      },
-      {
-        icon: TruckIcon,
-        title: "Competitive Rates",
-        description: "Cost-effective transportation",
-      },
-    ];
+    {
+      icon: BiCheckShield,
+      title: "Safety First",
+      description: "Industry-leading safety scores",
+    },
+    {
+      icon: ClockIcon,
+      title: "On-Time Delivery",
+      description: "99.8% precision rate",
+    },
+    {
+      icon: GoShieldLock,
+      title: "24/7 Secure Yard",
+      description: "Fully monitored yard",
+    },
+    {
+      icon: TruckIcon,
+      title: "Competitive Rates",
+      description: "Cost-effective transportation",
+    },
+  ];
 
   return (
     <div className="relative">
       <section
         className={cn(
-          "py-24 md:py-36 relative bg-cover bg-center",
+          "relative bg-cover bg-center py-24 md:py-36",
           `bg-[linear-gradient(to_right,rgba(0,0,0,0.75),rgba(0,0,0,0.5)),url('/hero.png')]`,
         )}
       >
-        <div className="max-w-7xl w-full mx-auto px-6 flex items-center justify-start">
-          <div className="max-w-3xl flex flex-col gap-6">
-            <div className="uppercase md:block text-soft-aqua max-w-max rounded-full hidden text-sm md:text-base lg:text-lg font-primary">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-start px-6">
+          <div className="flex max-w-3xl flex-col gap-6">
+            <div className="text-soft-aqua font-primary hidden max-w-max rounded-full text-sm uppercase md:block md:text-base lg:text-lg">
               where we deliever reliability
             </div>
-            <h1 className="font-secondary text-white font-bold text-4xl text-pretty lg:text-6xl leading-[1.2]">
+            <h1 className="font-secondary text-4xl leading-[1.2] font-bold text-pretty text-white lg:text-6xl">
               Reliable Logistics Across North America
             </h1>
-            <p className="text-soft-gray/80 text-base -mt-6 md:text-lg font-primary lg:text-2xl">
+            <p className="text-soft-gray/80 font-primary -mt-6 text-base md:text-lg lg:text-2xl">
               Precision-driven transportation solutions designed for the modern
               world. Reliable, safe, and efficient delivery across every mile.
             </p>
-            <div className="w-full gap-6 flex items-center mt-4 justify-between max-w-md">
+            <div className="mt-4 flex w-full max-w-md items-center justify-between gap-6">
               <button
                 className={
-                  "text-center py-3 bg-soft-aqua/80 border-soft-aqua/80 border-2 hover:bg-soft-aqua cursor-pointer font-bold font-primary w-full rounded-full text-soft-gray transition-colors"
+                  "bg-soft-aqua/80 border-soft-aqua/80 hover:bg-soft-aqua font-primary text-soft-gray w-full cursor-pointer rounded-full border-2 py-3 text-center font-bold transition-colors"
                 }
               >
                 Our Services
               </button>
               <button
                 className={
-                  "text-center py-3 bg-transparent text-soft-aqua w-full rounded-full font-bold border-soft-aqua font-primary border-2 cursor-pointer hover:bg-soft-aqua hover:text-white transition-colors"
+                  "text-soft-aqua border-soft-aqua font-primary hover:bg-soft-aqua w-full cursor-pointer rounded-full border-2 bg-transparent py-3 text-center font-bold transition-colors hover:text-white"
                 }
               >
                 Contact Us
@@ -72,23 +72,23 @@ export default function LandingAboveTheFold() {
         </div>
       </section>
 
-      <section className="max-w-7xl lg:shadow-xl lg:border-neutral-300 lg:rounded-2xl lg:bg-soft-gray lg:border-2 lg:absolute lg:top-full lg:-translate-y-1/2 lg:z-50 p-3 lg:p-6 gap-3 lg:gap-0 lg:left-1/2 lg:-translate-x-1/2 w-full flex items-start lg:items-center flex-col lg:flex-row justify-between">
+      <section className="lg:bg-soft-gray flex w-full max-w-7xl flex-col items-start justify-between gap-3 p-3 lg:absolute lg:top-full lg:left-1/2 lg:z-50 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:flex-row lg:items-center lg:gap-0 lg:rounded-2xl lg:border-2 lg:border-neutral-300 lg:p-6 lg:shadow-xl">
         {promises.map((promise, index) => (
           <div
             key={index}
             className={cn(
-              "flex items-center justify-between py-6 gap-2 border w-full lg:border-none lg:w-auto rounded-lg border-gray-300 px-4 lg:px-0 shadow-sm",
-              index !== 0 && "lg:border-l-2 lg:px-8 lg:border-neutral-300",
+              "flex w-full items-center justify-between gap-2 rounded-lg border border-gray-300 px-4 py-6 shadow-sm lg:w-auto lg:border-none lg:px-0",
+              index !== 0 && "lg:border-l-2 lg:border-neutral-300 lg:px-8",
             )}
           >
-            <div className="p-3 bg-soft-aqua/10 rounded-md">
-              <promise.icon className="size-6 text-soft-aqua" />
+            <div className="bg-soft-aqua/10 rounded-md p-3">
+              <promise.icon className="text-soft-aqua size-6" />
             </div>
             <div className="w-full">
               <h3 className="font-primary text-md font-bold">
                 {promise.title}
               </h3>
-              <p className="text-neutral-500 font-primary text-sm">
+              <p className="font-primary text-sm text-neutral-500">
                 {promise.description}
               </p>
             </div>

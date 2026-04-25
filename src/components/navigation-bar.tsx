@@ -47,8 +47,8 @@ export default function NavigationBar() {
   return (
     <React.Fragment>
       {/* Topbar */}
-      <div className="w-full bg-deap-teal hidden md:block">
-        <div className="w-full max-w-7xl mx-auto p-3 flex items-center justify-between">
+      <div className="bg-deap-teal hidden w-full md:block">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between p-3">
           {/* Business Information */}
           <div className="flex items-center justify-start gap-6">
             {businessInfo.map((info, index) => (
@@ -56,10 +56,10 @@ export default function NavigationBar() {
                 key={index}
                 className="flex items-center justify-center gap-2"
               >
-                <div className="p-2 bg-forest-green/80 rounded-full">
+                <div className="bg-forest-green/80 rounded-full p-2">
                   <info.icon className="size-4 text-white" />
                 </div>
-                <span className="font-primary text-white text-sm lg:text-lg">
+                <span className="font-primary text-sm text-white lg:text-lg">
                   {info.text}
                 </span>
               </div>
@@ -68,12 +68,12 @@ export default function NavigationBar() {
 
           {/* Socials */}
           <div className="flex items-center justify-end gap-2">
-            <span className="text-lg hidden lg:block font-primary text-white">
+            <span className="font-primary hidden text-lg text-white lg:block">
               Visit our social pages
             </span>
             {socials.map((social, index) => (
               <a key={index} href={social.link}>
-                <button className="bg-forest-green/80 p-2 rounded-full">
+                <button className="bg-forest-green/80 rounded-full p-2">
                   <social.icon className="size-4 text-white" />
                 </button>
               </a>
@@ -84,14 +84,14 @@ export default function NavigationBar() {
 
       {/* Navigation Bar */}
       <nav className="w-full border-b">
-        <div className="flex items-center justify-between max-w-7xl mx-auto w-full p-6">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between p-6">
           {/* Logo */}
           <div className="flex items-center justify-start">
             <img src={logo} alt="WhiteRock Logo" />
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center justify-end gap-6">
+          <div className="hidden items-center justify-end gap-6 md:flex">
             {navigationLinks.map((link, index) => {
               const linkHash = getLink(link);
               return (
@@ -114,7 +114,7 @@ export default function NavigationBar() {
           {/* Mobile Menu Toggle */}
           <div className="md:hidden">
             <button
-              className="cursor-pointer p-2 hover:bg-soft-gray rounded-sm focus:bg-soft-gray"
+              className="hover:bg-soft-gray focus:bg-soft-gray cursor-pointer rounded-sm p-2"
               onClick={() => setMobileMenuOpen(true)}
             >
               <MenuIcon className="size-6" />
@@ -126,24 +126,24 @@ export default function NavigationBar() {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "fixed inset-0 bg-white z-50",
+          "fixed inset-0 z-50 bg-white",
           !mobileMenuOpen && "hidden",
         )}
       >
         {/* Mobile Menu Header */}
-        <div className="w-full p-6 flex items-center justify-between">
+        <div className="flex w-full items-center justify-between p-6">
           <img src={logo} alt="WhiteRock Logo" />
 
           <button
             onClick={() => setMobileMenuOpen(false)}
-            className="cursor-pointer p-2 hover:bg-soft-gray focus:bg-soft-gray rounded-sm"
+            className="hover:bg-soft-gray focus:bg-soft-gray cursor-pointer rounded-sm p-2"
           >
             <XIcon className="size-6" />
           </button>
         </div>
 
         {/* Mobile Menu Content */}
-        <div className="w-full px-6 flex flex-col gap-4">
+        <div className="flex w-full flex-col gap-4 px-6">
           {navigationLinks.map((link, index) => {
             const linkHash = getLink(link);
             return (

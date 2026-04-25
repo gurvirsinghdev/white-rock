@@ -8,5 +8,5 @@ export default function RootLayout() {
       <NavigationBar />
       <Outlet />
     </React.Fragment>
-  )
+  );
 }
