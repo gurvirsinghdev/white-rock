@@ -2,13 +2,13 @@
 
 @theme {
   /* Brand Colors */
-  --color-deap-teal: #0F3D3E; 
-  --color-forest-green: #2E6F5E;
+  --color-deap-teal: #0f3d3e;
+  --color-forest-green: #2e6f5e;
   --color-charcoal: #121212;
-  --color-soft-gray: #F4F6F7;
-  --color-soft-aqua: #4FB3A5;
+  --color-soft-gray: #f4f6f7;
+  --color-soft-aqua: #4fb3a5;
 
   /* Typography */
-  --font-primary: 'DM Sans', sans-serif;
-  --font-secondary: 'Poppins', sans-serif;
+  --font-primary: "DM Sans", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
 }
