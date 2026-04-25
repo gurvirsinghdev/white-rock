@@ -2,7 +2,7 @@ import { ClockIcon, TruckIcon, type LucideIcon } from "lucide-react";
 import type { IconType } from "react-icons";
 import { BiCheckShield } from "react-icons/bi";
 import { GoShieldLock } from "react-icons/go";
-import { cn } from "../utils";
+import { cn } from "../../utils";
 
 export default function LandingAboveTheFold() {
   const promises: {
@@ -10,27 +10,27 @@ export default function LandingAboveTheFold() {
     title: string;
     description: string;
   }[] = [
-    {
-      icon: BiCheckShield,
-      title: "Safety First",
-      description: "Industry-leading safety scores",
-    },
-    {
-      icon: ClockIcon,
-      title: "On-Time Delivery",
-      description: "99.8% precision rate",
-    },
-    {
-      icon: GoShieldLock,
-      title: "24/7 Secure Yard",
-      description: "Fully monitored yard",
-    },
-    {
-      icon: TruckIcon,
-      title: "Competitive Rates",
-      description: "Cost-effective transportation",
-    },
-  ];
+      {
+        icon: BiCheckShield,
+        title: "Safety First",
+        description: "Industry-leading safety scores",
+      },
+      {
+        icon: ClockIcon,
+        title: "On-Time Delivery",
+        description: "99.8% precision rate",
+      },
+      {
+        icon: GoShieldLock,
+        title: "24/7 Secure Yard",
+        description: "Fully monitored yard",
+      },
+      {
+        icon: TruckIcon,
+        title: "Competitive Rates",
+        description: "Cost-effective transportation",
+      },
+    ];
 
   return (
     <div className="relative">
