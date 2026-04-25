@@ -10,27 +10,27 @@ export default function LandingAboveTheFold() {
     title: string;
     description: string;
   }[] = [
-    {
-      icon: BiCheckShield,
-      title: "Safety First",
-      description: "Industry-leading safety scores",
-    },
-    {
-      icon: ClockIcon,
-      title: "On-Time Delivery",
-      description: "99.8% precision rate",
-    },
-    {
-      icon: GoShieldLock,
-      title: "24/7 Secure Yard",
-      description: "Fully monitored yard",
-    },
-    {
-      icon: TruckIcon,
-      title: "Competitive Rates",
-      description: "Cost-effective transportation",
-    },
-  ];
+      {
+        icon: BiCheckShield,
+        title: "Safety First",
+        description: "Industry-leading safety scores",
+      },
+      {
+        icon: ClockIcon,
+        title: "On-Time Delivery",
+        description: "99.8% precision rate",
+      },
+      {
+        icon: GoShieldLock,
+        title: "24/7 Secure Yard",
+        description: "Fully monitored yard",
+      },
+      {
+        icon: TruckIcon,
+        title: "Competitive Rates",
+        description: "Cost-effective transportation",
+      },
+    ];
 
   return (
     <div className="relative">
@@ -72,13 +72,13 @@ export default function LandingAboveTheFold() {
         </div>
       </section>
 
-      <section className="max-w-7xl shadow-xl border-neutral-300 rounded-2xl bg-soft-gray border-2 absolute top-full -translate-y-1/2 z-50 p-6 left-1/2 -translate-x-1/2 w-full flex items-center justify-between">
+      <section className="max-w-7xl lg:shadow-xl lg:border-neutral-300 lg:rounded-2xl lg:bg-soft-gray lg:border-2 lg:absolute lg:top-full lg:-translate-y-1/2 lg:z-50 p-3 lg:p-6 gap-3 lg:gap-0 lg:left-1/2 lg:-translate-x-1/2 w-full flex items-start lg:items-center flex-col lg:flex-row justify-between">
         {promises.map((promise, index) => (
           <div
             key={index}
             className={cn(
-              "flex items-center justify-between py-6 gap-2",
-              index !== 0 && "border-l-2 px-8 border-neutral-300",
+              "flex items-center justify-between py-6 gap-2 border w-full lg:border-none lg:w-auto rounded-lg border-gray-300 px-4 lg:px-0 shadow-sm",
+              index !== 0 && "lg:border-l-2 lg:px-8 lg:border-neutral-300",
             )}
           >
             <div className="p-3 bg-soft-aqua/10 rounded-md">
